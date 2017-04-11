@@ -1,11 +1,12 @@
 # encoding=utf-8
 
+import six
 import twitter_text, sys, os, json, argparse, re
 from twitter_text.unicode import force_unicode
 
 narrow_build = True
 try:
-    unichr(0x20000)
+    six.unichr(0x20000)
     narrow_build = False
 except:
     pass
